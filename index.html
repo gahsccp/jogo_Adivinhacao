@@ -1,0 +1,65 @@
+<!--<!DOCTYPE html>: Esta declaração define o tipo de documento como HTML5.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adivinhe a Palavra</title>
+
+	<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">: Define o tipo de conteúdo e o conjunto de caracteres do 
+	documento como UTF-8, que é um padrão para codificação de caracteres.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">: 
+	Define a configuração de visualização para dispositivos móveis, indicando que a largura da tela deve ser igual à largura do dispositivo e que 
+	a escala inicial deve ser de 1.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Essas linhas importam o framework Bootstrap, que fornece estilos pré-definidos e funcionalidades JavaScript para a criação rápida de
+	 interfaces web responsivas e estilizadas.-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="game.css">
+
+<script src="game_login.js"></script>
+</head>
+<body>
+
+<center>
+	<h1>Jogo de Adivinhação</h1>
+
+	<!--Define um container com classe login_div1, usando o sistema de grid do Bootstrap para especificar o tamanho do container em 
+		diferentes tamanhos de tela.-->
+
+	<div class="col-lg-4 col-sm-8 col-xs-11 login_div1">
+		<h3 >Jogador 1, entre para jogar.</h3>
+		<label >Nome de Usuário:</label>
+		 <input type="text" id="player1_name_input" class="form-control" placeholder="Nome do Jogador 1">
+		 <br>
+	</div>
+<br>
+
+<!--Define um container semelhante para o jogador 2, com classe login_div2, título e campo de entrada de texto para o nome do jogador 2.-->
+
+	<div class="col-lg-4 col-sm-8 col-xs-11 login_div2">
+		<h3 >Jogador 2, entre para jogar.</h3>
+		  <label >Nome de Usuário:</label>
+		 <input type="text" id="player2_name_input" class="form-control" placeholder="Nome do Jogador 2">
+		<br>
+	</div>
+	<br>
+
+	<!--    btn: Esta classe é usada para estilizar elementos como botões. Ela adiciona estilos padrão para tornar o elemento visualmente 
+		semelhante a um botão.
+
+    btn-primary: Esta classe é uma variação da classe "btn" e é usada para aplicar estilos específicos para um botão primário. 
+	Por padrão, um botão primário no Bootstrap é exibido com uma cor de fundo azul, indicando que é uma ação principal ou destacada na 
+	interface.-->
+	
+		<button style="width:30%" class="btn btn-primary" onclick="addUser()">Entrar</button>
+</center>
+
+</body>
+</html>

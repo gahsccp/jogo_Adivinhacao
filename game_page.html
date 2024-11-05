@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adivinhe a Palavra!</title>
+
+	<!--Define a configuração de visualização da página para se ajustar à largura do dispositivo e definir a escala inicial como 1. 
+		Isso é importante para garantir uma boa experiência de usuário em dispositivos móveis.-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Importa o framework Bootstrap e suas dependências (jQuery e Bootstrap JavaScript) para estilização e funcionalidades adicionais na página.-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+
+<h4 id="player1_name"></h4> <span id="player1_score"></span>
+<br>
+<h4 id="player2_name"></h4> <span id="player2_score"></span>
+
+<!--Define um contêiner <div> com a classe Bootstrap "container" para centralizar o conteúdo.
+Dentro do contêiner, temos um <center> para centralizar o conteúdo que segue.-->
+
+<div class="container">
+	<center>
+		<h2 style="color: white;">Adivinhe a Palavra!</h2>
+		<h3 id="player_question"></h3>
+		<h3 id="player_answer"></h3>
+
+		<!--    col-lg-6": Esta classe é composta por duas partes:
+        "col": Abreviação de "column" (coluna). Indica que o elemento será tratado como uma coluna em um layout de grade.
+        "lg": Indica que o comportamento se aplica a dispositivos com largura grande (large). Ou seja, em dispositivos com telas largas, 
+		gura do contêiner pai em dispositivos grandes.
+
+        Portanto, a classe "col-lg-6" é usada para dividir o contêiner pai em duas colunas iguais em dispositivos grandes, proporcionando um layout r
+		esponsivo onde o conteúdo é exibido lado a lado em telas maiores.-->
+		<div id="output" class="col-lg-6"> </div>
+		<br>
+		<br>
+		<label>Sua palavra: <b style="color: red">Use uma palavra com 5 ou mais letras
+		</b>
+		</label>
+
+		<!--A classe "form-control" é uma classe do framework Bootstrap que é aplicada a elementos de formulário HTML, como <input>,
+			 a classe "form-control" facilita a criação de formulários estilizados e responsivos, tornando a entrada de dados uma experiência 
+			 mais agradável para o usuário.-->
+
+		<input type="text" id="word" class="form-control" placeholder="Palavra">
+		<br>
+
+		<!--A classe "btn btn-success" é uma classe do framework Bootstrap que é aplicada a elementos HTML do tipo botão (<button>),
+			quando você atribui a classe "btn btn-success" a um elemento HTML, como um botão, ele será estilizado como um botão do Bootstrap 
+			com uma cor de fundo verde, indicando que é uma ação de sucesso na página. Isso ajuda a chamar a atenção do usuário para a ação 
+			positiva que o botão executa.-->
+			
+		<button onclick="send()" class="btn btn-success" style="width: 30%;">Enviar</button>
+	</center>
+</div>
+
+<script src="game_page.js"></script>
+</body>
+</html>
